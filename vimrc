@@ -29,6 +29,7 @@ Plugin 'garbas/vim-snipmate'
 Plugin 'honza/vim-snippets'
 "Color Schemes
 Plugin 'Oisota/kotoria'
+Plugin 'altercation/vim-colors-solarized'
 "Syntax Files"
 Plugin 'sudar/vim-arduino-syntax'
 
@@ -91,7 +92,8 @@ set expandtab
 set nowrap
 
 "set color scheme
-colorscheme kotoria
+"colorscheme kotoria
+colorscheme solarized
 
 " Source a global configuration file if available
 "if filereadable("/etc/vim/vimrc.local")
@@ -99,10 +101,10 @@ colorscheme kotoria
 "endif
 
 "Code Folding
-set foldenable
-set foldlevelstart=10
-set foldnestmax=20
-set foldmethod=indent
+"set foldenable
+"set foldlevelstart=1
+"set foldnestmax=20
+"set foldmethod=indent
 
 "File Explorer
 let g:netrw_liststyle = 3
