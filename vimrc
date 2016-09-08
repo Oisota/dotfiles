@@ -97,7 +97,7 @@ set nowrap
 "colorscheme kotoria
 colorscheme solarized
 
-"set t_Co=16
+set t_Co=16
 
 " Source a global configuration file if available
 "if filereadable("/etc/vim/vimrc.local")
