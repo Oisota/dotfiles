@@ -32,6 +32,7 @@ Plugin 'Oisota/kotoria'
 Plugin 'altercation/vim-colors-solarized'
 "Syntax Files"
 Plugin 'sudar/vim-arduino-syntax'
+Plugin 'rust-lang/rust.vim'
 
 call vundle#end()
 filetype plugin indent on
@@ -79,6 +80,7 @@ set autowrite		" Automatically save before commands like :next and :make
 
 "turn on line numbers
 set number
+set relativenumber
 set autoindent
 "set cursorline
 
@@ -94,6 +96,8 @@ set nowrap
 "set color scheme
 "colorscheme kotoria
 colorscheme solarized
+
+"set t_Co=16
 
 " Source a global configuration file if available
 "if filereadable("/etc/vim/vimrc.local")
@@ -111,3 +115,5 @@ let g:netrw_liststyle = 3
 
 "Show file name in title bar
 set title
+
+set term=screen-256color
