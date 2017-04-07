@@ -84,11 +84,11 @@ set relativenumber
 set autoindent
 "set cursorline
 
-"set tabs to 4 spaces
+"set tabs to 4 spaces, don't expand them
 set tabstop=4
 set shiftwidth=4
-set softtabstop=4
-set expandtab
+"set softtabstop=4
+set noexpandtab
 
 "disable line wrapping
 set nowrap
@@ -97,7 +97,7 @@ set nowrap
 "colorscheme kotoria
 colorscheme solarized
 
-set t_Co=16
+"set t_Co=16
 
 " Source a global configuration file if available
 "if filereadable("/etc/vim/vimrc.local")
@@ -117,3 +117,8 @@ let g:netrw_liststyle = 3
 set title
 
 set term=screen-256color
+
+autocmd FileType json set tabstop=2|set shiftwidth=2|set noexpandtab
+autocmd FileType javascript set tabstop=2|set shiftwidth=2|set noexpandtab
+autocmd FileType html set tabstop=2|set shiftwidth=2|set noexpandtab
+autocmd FileType htmldjango set tabstop=2|set shiftwidth=2|set noexpandtab
