@@ -33,6 +33,8 @@ Plugin 'altercation/vim-colors-solarized'
 "Syntax Files"
 Plugin 'sudar/vim-arduino-syntax'
 Plugin 'rust-lang/rust.vim'
+Plugin 'ElmCast/elm-vim'
+Plugin 'posva/vim-vue'
 
 call vundle#end()
 filetype plugin indent on
@@ -122,3 +124,5 @@ autocmd FileType json set tabstop=2|set shiftwidth=2|set noexpandtab
 autocmd FileType javascript set tabstop=2|set shiftwidth=2|set noexpandtab
 autocmd FileType html set tabstop=2|set shiftwidth=2|set noexpandtab
 autocmd FileType htmldjango set tabstop=2|set shiftwidth=2|set noexpandtab
+autocmd FileType vue set tabstop=2|set shiftwidth=2|set noexpandtab
+autocmd FileType markdown set spelllang=en|set spell
