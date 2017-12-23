@@ -72,7 +72,7 @@ endif
 " differently from regular Vi. They are highly recommended though.
 set showcmd		" Show (partial) command in status line.
 set showmatch		" Show matching brackets.
-set ignorecase		" Do case insensitive matching
+"set ignorecase		" Do case insensitive matching
 "set smartcase		" Do smart case matching
 set incsearch		" Incremental search
 set hlsearch        " Highlight matches
@@ -99,7 +99,7 @@ set nowrap
 "colorscheme kotoria
 colorscheme solarized
 
-"set t_Co=16
+set t_Co=16
 
 " Source a global configuration file if available
 "if filereadable("/etc/vim/vimrc.local")
@@ -120,9 +120,11 @@ set title
 
 set term=screen-256color
 
+"file type specific options
 autocmd FileType json set tabstop=2|set shiftwidth=2|set noexpandtab
 autocmd FileType javascript set tabstop=2|set shiftwidth=2|set noexpandtab
 autocmd FileType html set tabstop=2|set shiftwidth=2|set noexpandtab
 autocmd FileType htmldjango set tabstop=2|set shiftwidth=2|set noexpandtab
 autocmd FileType vue set tabstop=2|set shiftwidth=2|set noexpandtab
 autocmd FileType markdown set spelllang=en|set spell
+autocmd FileType python set softtabstop=4|set expandtab
