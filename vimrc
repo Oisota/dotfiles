@@ -35,6 +35,8 @@ Plugin 'sudar/vim-arduino-syntax'
 Plugin 'rust-lang/rust.vim'
 Plugin 'ElmCast/elm-vim'
 Plugin 'posva/vim-vue'
+Plugin 'jelera/vim-javascript-syntax'
+Plugin 'zah/nim.vim'
 
 call vundle#end()
 filetype plugin indent on
