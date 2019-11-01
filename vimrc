@@ -37,6 +37,11 @@ Plugin 'ElmCast/elm-vim'
 Plugin 'posva/vim-vue'
 Plugin 'jelera/vim-javascript-syntax'
 Plugin 'zah/nim.vim'
+Plugin 'leafgarland/typescript-vim'
+Plugin 'udalov/kotlin-vim'
+"Misc
+Plugin 'ap/vim-css-color'
+Plugin 'ctrlpvim/ctrlp.vim'
 
 call vundle#end()
 filetype plugin indent on
@@ -101,7 +106,7 @@ set nowrap
 "colorscheme kotoria
 colorscheme solarized
 
-set t_Co=16
+"set t_Co=16
 
 " Source a global configuration file if available
 "if filereadable("/etc/vim/vimrc.local")
@@ -122,6 +127,18 @@ set title
 
 set term=screen-256color
 
+"custom mappings
+noremap <Space> <Nop>
+let mapleader = "\<Space>"
+
+noremap <leader>o o<Esc>
+noremap <leader>O O<Esc>
+
+noremap <leader><Tab> :bnext<CR>
+
+"Plugin Configuration
+let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files -co --exclude-standard']
+
 "file type specific options
 autocmd FileType json set tabstop=2|set shiftwidth=2|set noexpandtab
 autocmd FileType javascript set tabstop=2|set shiftwidth=2|set noexpandtab
@@ -130,3 +147,4 @@ autocmd FileType htmldjango set tabstop=2|set shiftwidth=2|set noexpandtab
 autocmd FileType vue set tabstop=2|set shiftwidth=2|set noexpandtab
 autocmd FileType markdown set spelllang=en|set spell
 autocmd FileType python set softtabstop=4|set expandtab
+autocmd BufNewFile,BufRead *.njk set syntax=htmldjango|set tabstop=2|set shiftwidth=2|set noexpandtab
