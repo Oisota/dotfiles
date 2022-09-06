@@ -1,3 +1,2 @@
-.vimrc
-======
-This is my .vimrc file.
+# Misc config files for various apps
+neovim, tmux, bash, etc.
