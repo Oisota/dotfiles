@@ -1,2 +1,2 @@
-# Misc config files for various apps
-neovim, tmux, bash, etc.
+# Dotfiles and such
+Currently just have my neovim config here.
