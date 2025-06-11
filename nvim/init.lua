@@ -53,6 +53,12 @@ vim.keymap.set('n', '<leader>fa', builtin.find_files, { desc = 'Telescope find a
 vim.keymap.set('n', '<leader>fg', builtin.live_grep, { desc = 'Telescope live grep' })
 vim.keymap.set('n', '<leader>fb', builtin.buffers, { desc = 'Telescope buffers' })
 vim.keymap.set('n', '<leader>fh', builtin.help_tags, { desc = 'Telescope help tags' })
+vim.keymap.set('n', '<leader>fm', builtin.man_pages, { desc = 'Telescope Man Pages' })
+vim.keymap.set('n', '<leader>fc', builtin.commands, { desc = 'Telescope Commands' })
+
+vim.keymap.set('n', '<leader>gc', builtin.git_commits, { desc = 'Telescope Git Commits' })
+vim.keymap.set('n', '<leader>gs', builtin.git_status, { desc = 'Telescope Git Status' })
+vim.keymap.set('n', '<leader>gb', builtin.git_branches, { desc = 'Telescope Git Branches' })
 
 -- configure gitsigns
 require('gitsigns').setup()
