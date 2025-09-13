@@ -31,6 +31,7 @@ local plugins = {
 	{'akinsho/bufferline.nvim', version = "*", dependencies = 'nvim-tree/nvim-web-devicons'},
 	{ "lukas-reineke/indent-blankline.nvim", main = "ibl", opts = {} },
 	'https://github.com/udalov/kotlin-vim',
+	'alaviss/nim.nvim',
 }
 require("lazy").setup(plugins)
 
@@ -78,6 +79,10 @@ require('lualine').setup {
 		lualine_c = {
 			{'filename', file_status = true, path = 1}
 		}
+	},
+	tabline = {
+		lualine_a = {'tabs'},
+		lualine_z = {'branch'},
 	}
 }
 
@@ -97,7 +102,7 @@ vim.opt.breakindent = true
 vim.opt.tabstop = 4
 vim.opt.shiftwidth = 4
 vim.opt.filetype = 'on'
-vim.opt.tabline = '1'
+vim.opt.foldenable = false
 -- Show which line your cursor is on
 vim.opt.cursorline = true
 -- Minimal number of screen lines to keep above and below the cursor.
