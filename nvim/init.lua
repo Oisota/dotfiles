@@ -25,13 +25,24 @@ local plugins = {
 	'Mofiqul/dracula.nvim',
 	'https://github.com/nvim-lua/plenary.nvim',
 	{'nvim-telescope/telescope.nvim', tag='0.1.6'},
+	{
+		'stevearc/oil.nvim',
+		---@module 'oil'
+		---@type oil.SetupOpts
+		opts = {},
+		-- Optional dependencies
+		dependencies = { { "nvim-mini/mini.icons", opts = {} } },
+		-- dependencies = { "nvim-tree/nvim-web-devicons" }, -- use if you prefer nvim-web-devicons
+		-- Lazy loading is not recommended because it is very tricky to make it work correctly in all situations.
+		lazy = false,
+	},
 	'f-person/git-blame.nvim',
 	{'lewis6991/gitsigns.nvim', tag='v0.7'},
 	{'nvim-lualine/lualine.nvim', dependencies = { 'nvim-tree/nvim-web-devicons' }},
-	{'akinsho/bufferline.nvim', version = "*", dependencies = 'nvim-tree/nvim-web-devicons'},
 	{ "lukas-reineke/indent-blankline.nvim", main = "ibl", opts = {} },
 	'https://github.com/udalov/kotlin-vim',
 	'alaviss/nim.nvim',
+	'wellle/context.vim',
 }
 require("lazy").setup(plugins)
 
@@ -86,9 +97,12 @@ require('lualine').setup {
 	}
 }
 
--- configure bufferline
--- this seems unnecessary given we can easily switch buffers with telescope
--- require('bufferline').setup()
+-- configure oil
+require('oil').setup({
+	confirmation = {
+		border = {"╔", "═" ,"╗", "║", "╝", "═", "╚", "║"}
+	}
+})
 
 -- configure indent blankline
 require('ibl').setup()
@@ -106,7 +120,7 @@ vim.opt.foldenable = false
 -- Show which line your cursor is on
 vim.opt.cursorline = true
 -- Minimal number of screen lines to keep above and below the cursor.
-vim.opt.scrolloff = 10
+-- vim.opt.scrolloff = 10
 
 -- custom mappings
 vim.api.nvim_set_keymap('n', '<Space>', '<Nop>', { noremap=true, silent=true })
@@ -122,6 +136,11 @@ vim.api.nvim_set_keymap('t', '<Esc>', [[<C-\><C-n>]], { noremap=true }) -- esc e
 vim.filetype.add({
 	filename = {
 		["Jenkinsfile"] = "groovy"
+	}
+})
+vim.filetype.add({
+	extension = {
+		njk = "htmldjango"
 	}
 })
 
