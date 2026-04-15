@@ -107,6 +107,9 @@ require('oil').setup({
 -- configure indent blankline
 require('ibl').setup()
 
+vim.g.context_filetype_blacklist = {'TelescopePrompt'}
+vim.g.context_buftype_blacklist = {'terminal'}
+
 -- general config
 vim.opt.relativenumber = true
 vim.opt.number = true
